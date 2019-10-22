@@ -8,10 +8,10 @@ target 'RxDemo' do
   # Pods for RxDemo
 
  	# Networking
-  #  pod 'Moya', '8.0.0-beta.2'
-  #  pod 'Moya-ObjectMapper',:git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
+    pod 'Moya', '~> 12.0'
+     pod 'Moya-ObjectMapper',:git => 'https://github.com/ivanbruel/Moya-ObjectMapper'
 
-    	pod 'Moya/RxSwift'  # https://github.com/Moya/Moya
+     #	pod 'Moya/RxSwift'  # https://github.com/Moya/Moya
 	pod 'ReachabilitySwift'  # https://github.com/ashleymills/Reachability.swift
 
  # Rx Extensions
@@ -26,7 +26,7 @@ target 'RxDemo' do
 
     # JSON Mapping
     #pod 'ObjectMapper', :git => 'https://github.com/kajensen/ObjectMapper.git'  # https://github.com/Hearst-DD/ObjectMapper
-        pod 'Moya-ObjectMapper/RxSwift'
+    #   pod 'Moya-ObjectMapper/RxSwift'
     # Image
     pod 'Kingfisher', '~> 5.0'  # https://github.com/onevcat/Kingfisher
 

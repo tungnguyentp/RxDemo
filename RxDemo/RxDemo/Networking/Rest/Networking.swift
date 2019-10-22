@@ -69,19 +69,6 @@ extension GithubNetworking {
     }
 }
 
-struct TrendingGithubNetworking: NetworkingType {
-    typealias T = TrendingGithubAPI
-    let provider: OnlineProvider<TrendingGithubAPI>
-}
-
-// MARK: - "Public" interfaces
-extension TrendingGithubNetworking {
-    func request(_ token: TrendingGithubAPI) -> Observable<Moya.Response> {
-        let actualRequest = self.provider.request(token)
-        return actualRequest
-    }
-}
-
 // Static methods
 extension NetworkingType {
     static func githubNetworking() -> GithubNetworking {

@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (4.0.1)
+  - Alamofire (4.9.0)
   - DateToolsSwift (4.0.0)
   - Differentiator (4.0.1)
   - IQKeyboardManagerSwift (6.5.1)
@@ -7,32 +7,27 @@ PODS:
   - Kingfisher (5.8.3):
     - Kingfisher/Core (= 5.8.3)
   - Kingfisher/Core (5.8.3)
-  - Moya (8.0.0-beta.3):
-    - Moya/Core (= 8.0.0-beta.3)
-  - Moya-ObjectMapper/Core (2.0.1):
-    - Moya (= 8.0.0-beta.3)
-    - ObjectMapper (= 2.2.0)
-  - Moya-ObjectMapper/RxSwift (2.0.1):
-    - Moya-ObjectMapper/Core
-    - Moya/RxSwift
-    - RxSwift
-  - Moya/Core (8.0.0-beta.3):
-    - Alamofire (~> 4.0.0)
-    - Result
-  - Moya/RxSwift (8.0.0-beta.3):
-    - Moya/Core
-    - RxSwift
+  - Moya (12.0.1):
+    - Moya/Core (= 12.0.1)
+  - Moya-ObjectMapper (2.8):
+    - Moya-ObjectMapper/Core (= 2.8)
+  - Moya-ObjectMapper/Core (2.8):
+    - Moya (~> 12.0)
+    - ObjectMapper (~> 3.4)
+  - Moya/Core (12.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.0)
   - "NSObject+Rx (5.0.2)":
     - RxSwift (~> 5.0)
   - NVActivityIndicatorView (4.8.0):
     - NVActivityIndicatorView/Presenter (= 4.8.0)
   - NVActivityIndicatorView/Presenter (4.8.0)
-  - ObjectMapper (2.2.0)
+  - ObjectMapper (3.5.1)
   - R.swift (5.1.0.alpha.4):
     - R.swift.Library (~> 5.1.0.alpha.1)
   - R.swift.Library (5.1.0)
   - ReachabilitySwift (5.0.0)
-  - Result (5.0.0)
+  - Result (4.1.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -68,8 +63,8 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.0)
   - KeychainAccess (~> 3.0)
   - Kingfisher (~> 5.0)
-  - Moya-ObjectMapper/RxSwift
-  - Moya/RxSwift
+  - Moya (~> 12.0)
+  - Moya-ObjectMapper (from `https://github.com/ivanbruel/Moya-ObjectMapper`)
   - "NSObject+Rx (~> 5.0)"
   - NVActivityIndicatorView (~> 4.0)
   - R.swift (= 5.1.0.alpha.4)
@@ -91,7 +86,6 @@ SPEC REPOS:
     - KeychainAccess
     - Kingfisher
     - Moya
-    - Moya-ObjectMapper
     - "NSObject+Rx"
     - NVActivityIndicatorView
     - ObjectMapper
@@ -110,22 +104,31 @@ SPEC REPOS:
     - SwiftDate
     - SwiftLint
 
+EXTERNAL SOURCES:
+  Moya-ObjectMapper:
+    :git: https://github.com/ivanbruel/Moya-ObjectMapper
+
+CHECKOUT OPTIONS:
+  Moya-ObjectMapper:
+    :commit: 7deadd2621af5812ab458707490b6bfe8015fc2b
+    :git: https://github.com/ivanbruel/Moya-ObjectMapper
+
 SPEC CHECKSUMS:
-  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   KeychainAccess: d5470352939ced6d6f7fb51cb2e67aae51fc294f
   Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
-  Moya: f83c7f81eaa28cb0151549dfcf1f3fda4440bb50
-  Moya-ObjectMapper: 816d23fdcfb4dcc14a9bbb6f174e8b5d530a881b
+  Moya: cf730b3cd9e005401ef37a85143aa141a12fd38f
+  Moya-ObjectMapper: c514b5eafcfd5e260f85f7a5bf66895a217e2b37
   "NSObject+Rx": 2eb2cf51fd1c554118449a7fbc36e4cd620b9e94
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
-  ObjectMapper: 4060d739febae11ab0c6af8d786f98667c82e1bd
+  ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   R.swift: 28fd04ea6eef3e5f494c963e367e4704293036c7
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
-  Result: ed341d2f236af425b803e690e9bd8fd0a0cb7c5a
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
@@ -137,6 +140,6 @@ SPEC CHECKSUMS:
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: d9b80299accb63e47ce3e1552b7f29783858cbce
+PODFILE CHECKSUM: e15cabf8ab36c659f23a9a4094b41701d0ac87a5
 
 COCOAPODS: 1.8.4

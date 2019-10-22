@@ -21,71 +21,19 @@ private let assetDir: URL = {
 }()
 
 enum GithubAPI {
-    case download(url: URL, fileName: String?)
-
-    // MARK: - Authentication is optional
-    case searchRepositories(query: String, sort: String, order: String, page: Int)
-    case repository(fullname: String)
-    case watchers(fullname: String, page: Int)
-    case stargazers(fullname: String, page: Int)
-    case forks(fullname: String, page: Int)
-    case readme(fullname: String, ref: String?)
+    
     case contents(fullname: String, path: String, ref: String?)
 
-    case issues(fullname: String, state: String, page: Int)
-    case issue(fullname: String, number: Int)
-    case issueComments(fullname: String, number: Int, page: Int)
-    case commits(fullname: String, page: Int)
-    case commit(fullname: String, sha: String)
-    case branches(fullname: String, page: Int)
-    case branch(fullname: String, name: String)
-    case releases(fullname: String, page: Int)
-    case release(fullname: String, releaseId: Int)
-    case pullRequests(fullname: String, state: String, page: Int)
-    case pullRequest(fullname: String, number: Int)
-    case pullRequestComments(fullname: String, number: Int, page: Int)
-    case contributors(fullname: String, page: Int)
-
-    case searchUsers(query: String, sort: String, order: String, page: Int)
-    case user(owner: String)
-    case organization(owner: String)
-    case userRepositories(username: String, page: Int)
-    case userStarredRepositories(username: String, page: Int)
-    case userWatchingRepositories(username: String, page: Int)
-    case userFollowers(username: String, page: Int)
-    case userFollowing(username: String, page: Int)
-
-    case events(page: Int)
-    case repositoryEvents(owner: String, repo: String, page: Int)
-    case userReceivedEvents(username: String, page: Int)
-    case userPerformedEvents(username: String, page: Int)
-    case organizationEvents(username: String, page: Int)
-
-    // MARK: - Authentication is required
-    case profile
-
-    case notifications(all: Bool, participating: Bool, page: Int)
-    case repositoryNotifications(fullname: String, all: Bool, participating: Bool, page: Int)
-    case markAsReadNotifications
-    case markAsReadRepositoryNotifications(fullname: String)
-
-    case checkStarring(fullname: String)
-    case starRepository(fullname: String)
-    case unstarRepository(fullname: String)
-
-    case checkFollowing(username: String)
-    case followUser(username: String)
-    case unfollowUser(username: String)
+   
 }
 
 extension GithubAPI: TargetType, ProductAPIType {
 
     var baseURL: URL {
         switch self {
-        case .download(let url, _):
-            return url
+
         default:
-            return Configs.Network.githubBaseUrl.url!
+            return "Configs.Network.githubBaseUrl.url!"
         }
     }
 

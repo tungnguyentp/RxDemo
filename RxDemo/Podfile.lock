@@ -27,6 +27,8 @@ PODS:
     - R.swift.Library (~> 5.1.0.alpha.1)
   - R.swift.Library (5.1.0)
   - ReachabilitySwift (5.0.0)
+  - ReactiveSwift (5.0.1):
+    - Result (~> 4.1)
   - Result (4.1.0)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
@@ -69,6 +71,7 @@ DEPENDENCIES:
   - NVActivityIndicatorView (~> 4.0)
   - R.swift (= 5.1.0.alpha.4)
   - ReachabilitySwift
+  - ReactiveSwift (~> 5.0)
   - RxDataSources (~> 4.0)
   - RxGesture (~> 3.0)
   - RxOptional (~> 4.0)
@@ -92,6 +95,7 @@ SPEC REPOS:
     - R.swift
     - R.swift.Library
     - ReachabilitySwift
+    - ReactiveSwift
     - Result
     - RxCocoa
     - RxDataSources
@@ -128,6 +132,7 @@ SPEC CHECKSUMS:
   R.swift: 28fd04ea6eef3e5f494c963e367e4704293036c7
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  ReactiveSwift: cac20a5bbe560c5806bd29c0fccf90d03b996ac1
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
@@ -140,6 +145,6 @@ SPEC CHECKSUMS:
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
 
-PODFILE CHECKSUM: e15cabf8ab36c659f23a9a4094b41701d0ac87a5
+PODFILE CHECKSUM: 9e7026f38555fb80d96b862c6a5264541a3b0e27
 
 COCOAPODS: 1.8.4

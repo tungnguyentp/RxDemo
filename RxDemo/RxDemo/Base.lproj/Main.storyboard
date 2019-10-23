@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RxDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="RxDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,10 +61,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnLogin" destination="t55-L2-Xhj" id="DeI-lU-krs"/>
-                        <outlet property="lblTitle" destination="X16-0R-fbD" id="fPI-LL-qWe"/>
-                        <outlet property="txtPass" destination="hTt-J3-qdG" id="kdE-QD-vhs"/>
-                        <outlet property="txtUserName" destination="gbx-Ur-tWk" id="HFu-kt-5ey"/>
+                        <outlet property="btnLogin" destination="t55-L2-Xhj" id="9iX-rU-HLh"/>
+                        <outlet property="tfPass" destination="hTt-J3-qdG" id="BVs-rg-KZp"/>
+                        <outlet property="tfUser" destination="gbx-Ur-tWk" id="F4c-RC-vzL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E3513547568F1B5705EB26B /* Pods_RxDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 226EB5D7741F957E420226C0 /* Pods_RxDemo.framework */; };
+		882220502360519600208087 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8822204F2360519600208087 /* LoginViewController.swift */; };
+		88222052236051E500208087 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88222051236051E500208087 /* LoginViewModel.swift */; };
 		8824B726235EDCD800DCE89D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B725235EDCD800DCE89D /* ViewController.swift */; };
 		8824B729235EDCD800DCE89D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8824B727235EDCD800DCE89D /* Main.storyboard */; };
 		8824B72C235EDCD800DCE89D /* RxDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8824B72A235EDCD800DCE89D /* RxDemo.xcdatamodeld */; };
@@ -50,6 +52,8 @@
 		73F44AF96E588B9BB7075E1B /* Pods-RxDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-RxDemoUITests/Pods-RxDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		824228961AA266AA02834431 /* Pods-RxDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemoTests.debug.xcconfig"; path = "Target Support Files/Pods-RxDemoTests/Pods-RxDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		856FE1243789A6133AF82E20 /* Pods-RxDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxDemoUITests/Pods-RxDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8822204F2360519600208087 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		88222051236051E500208087 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		8824B720235EDCD800DCE89D /* RxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8824B725235EDCD800DCE89D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8824B728235EDCD800DCE89D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +120,13 @@
 				F2C943E9B61F738187EED38E /* Pods_RxDemoUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8822204A23604AC100208087 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		8824B717235EDCD800DCE89D = {
@@ -237,6 +248,7 @@
 		8824B75D235EE3E200DCE89D /* Modulers */ = {
 			isa = PBXGroup;
 			children = (
+				8822204A23604AC100208087 /* Main */,
 				8824B75F235EE5AA00DCE89D /* Login */,
 			);
 			path = Modulers;
@@ -252,6 +264,8 @@
 		8824B75F235EE5AA00DCE89D /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				8822204F2360519600208087 /* LoginViewController.swift */,
+				88222051236051E500208087 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -471,7 +485,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -525,12 +539,14 @@
 			files = (
 				8824B7CF235EEE6000DCE89D /* RestApi.swift in Sources */,
 				8824B756235EE3CA00DCE89D /* AppDelegate.swift in Sources */,
+				88222052236051E500208087 /* LoginViewModel.swift in Sources */,
 				8824B7CD235EEE6000DCE89D /* GitHubAPI.swift in Sources */,
 				8824B726235EDCD800DCE89D /* ViewController.swift in Sources */,
 				8824B72C235EDCD800DCE89D /* RxDemo.xcdatamodeld in Sources */,
 				8824B7A3235EEE6000DCE89D /* Api.swift in Sources */,
 				8824B7D0235EEE6000DCE89D /* ErrorResponse.swift in Sources */,
 				8824B771235EE8CE00DCE89D /* R.generated.swift in Sources */,
+				882220502360519600208087 /* LoginViewController.swift in Sources */,
 				8824B7CE235EEE6000DCE89D /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

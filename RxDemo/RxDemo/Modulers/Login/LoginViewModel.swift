@@ -27,6 +27,7 @@ class LoginViewModel {
     }
     
     struct Output {
+        let insValidateEmail:Observable<Bool>
         let isEnableButton: Driver<Bool>
     }
     
@@ -36,7 +37,7 @@ class LoginViewModel {
     func transform(input: Input) -> Output{
         
       
-        let isEnable = Observable.combineLatest(
+        let isEnableCount = Observable.combineLatest(
             userName, password,
             resultSelector: { value1, value2 in
                 
@@ -44,8 +45,34 @@ class LoginViewModel {
   
         }).observeOn(MainScheduler.instance)
             .asDriver(onErrorJustReturn: false)
+        
+
+        let isValidateEMail = userName.map { (text) -> Bool in
+             let isVali = self.ValidateEmailString(strEmail: text)
+            return isVali
+        }.distinctUntilChanged()
+        
+        print(isEnableCount)
+        
+//        let bac = Observable.combineLatest(isEnableCount, isValidateEMail) { (v1, v2) in
+//            return v1 && v2
+//            }.observeOn(MainScheduler.instance)
+//            .asDriver(onErrorJustReturn: false)
+        
+    
    
-        return Output.init(isEnableButton: isEnable)
+        return Output.init(insValidateEmail: isValidateEMail, isEnableButton: isEnableCount)
+    }
+    
+    
+    
+    func ValidateEmailString (strEmail: String) -> Bool
+    {
+      //  var isBool = BehaviorRelay(value: false)
+        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailText = NSPredicate(format:"SELF MATCHES [c]%@",emailRegex)
+     //   isBool = BehaviorRelay.init(value: emailText.evaluate(with: strEmail))
+        return emailText.evaluate(with: strEmail)
     }
     
 }

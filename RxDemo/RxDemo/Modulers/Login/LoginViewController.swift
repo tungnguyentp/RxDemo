@@ -12,12 +12,13 @@ import RxCocoa
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var lblErrorEmail: UILabel!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var tfPass: UITextField!
     @IBOutlet weak var tfUser: UITextField!
     
     let disposeBag = DisposeBag()
-    var viewModel: LoginViewModel?
+    var viewModel = LoginViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,8 @@ class LoginViewController: UIViewController {
     }
     
     private func setUpBindings() {
-        guard let viewModel = self.viewModel else { return }
+    //     guard let viewModel = viewModel else { return }
+        self.lblErrorEmail.text = ""
         
         self.tfUser.rx.text.orEmpty.asObservable()
         .bind(to: viewModel.userName).disposed(by: disposeBag)
@@ -38,5 +40,17 @@ class LoginViewController: UIViewController {
         let input = LoginViewModel.Input.init(btnLogin: btnLogin.rx.tap.asDriver())
         let output = viewModel.transform(input: input)
         output.isEnableButton.drive(btnLogin.rx.isEnabled).disposed(by: disposeBag)
+//        output.insValidateEmail.bind { (isVali) in
+//            self.lblErrorEmail.text = isVali ? "sadsa" : "sadasrwer"
+//        }
+        
+        output.insValidateEmail.subscribe { (isVali) in
+         //    self.lblErrorEmail.text = (isVali ? "sadsa" : "sadasrwer")
+            if isVali.element!{
+                self.lblErrorEmail.text = "sda"
+            }else{
+                self.lblErrorEmail.text = "sda1212121"
+            }
+        }
     }
 }

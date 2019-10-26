@@ -28,7 +28,8 @@ class LoginViewModel {
     
     struct Output {
         let insValidateEmail:Observable<Bool>
-        let isEnableButton: Driver<Bool>
+        let isEnableButton: Observable<Bool>
+        let isValidatePass: Observable<Bool>
     }
     
     let userName = BehaviorRelay(value: "")
@@ -36,32 +37,22 @@ class LoginViewModel {
     
     func transform(input: Input) -> Output{
         
-      
-        let isEnableCount = Observable.combineLatest(
-            userName, password,
-            resultSelector: { value1, value2 in
-                
-                return value1.count > 3 && value2.count > 3
-  
-        }).observeOn(MainScheduler.instance)
-            .asDriver(onErrorJustReturn: false)
-        
-
-        let isValidateEMail = userName.map { (text) -> Bool in
-             let isVali = self.ValidateEmailString(strEmail: text)
-            return isVali
+        let isValidatePass = password.skip(2).map { (text) -> Bool in
+            return text.count > 6
         }.distinctUntilChanged()
         
-        print(isEnableCount)
+        let isValidateEMail = userName.skip(2).map { (text) -> Bool in
+            let isVali = self.ValidateEmailString(strEmail: text)
+            return isVali
+            }.distinctUntilChanged()
         
-//        let bac = Observable.combineLatest(isEnableCount, isValidateEMail) { (v1, v2) in
-//            return v1 && v2
-//            }.observeOn(MainScheduler.instance)
-//            .asDriver(onErrorJustReturn: false)
+        let isEnableBTN = Observable.combineLatest(
+            userName, isValidateEMail, isValidatePass,
+            resultSelector: { value1,value2,value3 in
+                return value1.count > 3 && value2 && value3
+        })
         
-    
-   
-        return Output.init(insValidateEmail: isValidateEMail, isEnableButton: isEnableCount)
+        return Output.init(insValidateEmail: isValidateEMail, isEnableButton: isEnableBTN, isValidatePass: isValidatePass)
     }
     
     

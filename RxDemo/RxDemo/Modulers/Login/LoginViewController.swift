@@ -12,6 +12,7 @@ import RxCocoa
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var lblErrorPass: UILabel!
     @IBOutlet weak var lblErrorEmail: UILabel!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var tfPass: UITextField!
@@ -30,8 +31,10 @@ class LoginViewController: UIViewController {
     private func setUpBindings() {
     //     guard let viewModel = viewModel else { return }
         self.lblErrorEmail.text = ""
+        self.lblErrorPass.text = ""
+        self.btnLogin.isEnabled = false
         
-        self.tfUser.rx.text.orEmpty.asObservable()
+        self.tfUser.rx.text.orEmpty.skip(2).asObservable()
         .bind(to: viewModel.userName).disposed(by: disposeBag)
         
         self.tfPass.rx.text.orEmpty
@@ -39,18 +42,18 @@ class LoginViewController: UIViewController {
        
         let input = LoginViewModel.Input.init(btnLogin: btnLogin.rx.tap.asDriver())
         let output = viewModel.transform(input: input)
-        output.isEnableButton.drive(btnLogin.rx.isEnabled).disposed(by: disposeBag)
-//        output.insValidateEmail.bind { (isVali) in
-//            self.lblErrorEmail.text = isVali ? "sadsa" : "sadasrwer"
-//        }
         
-        output.insValidateEmail.subscribe { (isVali) in
-         //    self.lblErrorEmail.text = (isVali ? "sadsa" : "sadasrwer")
-            if isVali.element!{
-                self.lblErrorEmail.text = "sda"
-            }else{
-                self.lblErrorEmail.text = "sda1212121"
-            }
-        }
+        output.isEnableButton.subscribe { isVali in
+            self.btnLogin.isEnabled = isVali.element!
+        }.disposed(by: disposeBag)
+
+        
+        output.isValidatePass.subscribe { isVali in
+            self.lblErrorPass.text = isVali.element! ? "" : "Pass phải lớn hơn 6 kí tự"
+        }.disposed(by: disposeBag)
+        
+        output.insValidateEmail.subscribe { isVali in
+             self.lblErrorEmail.text = isVali.element! ? "" : "Mail sai định dạng"
+        }.disposed(by: disposeBag)
     }
 }

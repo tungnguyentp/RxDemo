@@ -21,10 +21,14 @@
 		8824B766235EE6C300DCE89D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8824B768235EE6C300DCE89D /* Localizable.strings */; };
 		8824B771235EE8CE00DCE89D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B770235EE8CE00DCE89D /* R.generated.swift */; };
 		8824B7A3235EEE6000DCE89D /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B772235EEE6000DCE89D /* Api.swift */; };
-		8824B7CD235EEE6000DCE89D /* GitHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B79E235EEE6000DCE89D /* GitHubAPI.swift */; };
 		8824B7CE235EEE6000DCE89D /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B79F235EEE6000DCE89D /* Networking.swift */; };
 		8824B7CF235EEE6000DCE89D /* RestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B7A0235EEE6000DCE89D /* RestApi.swift */; };
 		8824B7D0235EEE6000DCE89D /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8824B7A1235EEE6000DCE89D /* ErrorResponse.swift */; };
+		882A91C62363FC4500F16B83 /* BeberiaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A91C42363FC4500F16B83 /* BeberiaService.swift */; };
+		882A91C72363FC4500F16B83 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A91C52363FC4500F16B83 /* APIManager.swift */; };
+		882A91C92363FDE700F16B83 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A91C82363FDE700F16B83 /* User.swift */; };
+		882A91CC2363FDEE00F16B83 /* BabyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A91CA2363FDED00F16B83 /* BabyInfo.swift */; };
+		882A91CD2363FDEE00F16B83 /* CityName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882A91CB2363FDEE00F16B83 /* CityName.swift */; };
 		E75A0D872F0114C1A915F419 /* Pods_RxDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A394701337A2B1BDBDD5188A /* Pods_RxDemoTests.framework */; };
 		F62AB8B41BD2EB0564C8FACB /* Pods_RxDemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2C943E9B61F738187EED38E /* Pods_RxDemoUITests.framework */; };
 /* End PBXBuildFile section */
@@ -74,10 +78,14 @@
 		8824B76F235EE86300DCE89D /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8824B770235EE8CE00DCE89D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		8824B772235EEE6000DCE89D /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		8824B79E235EEE6000DCE89D /* GitHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAPI.swift; sourceTree = "<group>"; };
 		8824B79F235EEE6000DCE89D /* Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		8824B7A0235EEE6000DCE89D /* RestApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestApi.swift; sourceTree = "<group>"; };
 		8824B7A1235EEE6000DCE89D /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		882A91C42363FC4500F16B83 /* BeberiaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeberiaService.swift; sourceTree = "<group>"; };
+		882A91C52363FC4500F16B83 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		882A91C82363FDE700F16B83 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		882A91CA2363FDED00F16B83 /* BabyInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyInfo.swift; sourceTree = "<group>"; };
+		882A91CB2363FDEE00F16B83 /* CityName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityName.swift; sourceTree = "<group>"; };
 		900A4C0F86DFB386A42B8105 /* Pods-RxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxDemo.debug.xcconfig"; path = "Target Support Files/Pods-RxDemo/Pods-RxDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		A394701337A2B1BDBDD5188A /* Pods_RxDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2C943E9B61F738187EED38E /* Pods_RxDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxDemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +225,9 @@
 		8824B759235EE3E100DCE89D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				882A91CA2363FDED00F16B83 /* BabyInfo.swift */,
+				882A91CB2363FDEE00F16B83 /* CityName.swift */,
+				882A91C82363FDE700F16B83 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -273,7 +284,8 @@
 		8824B773235EEE6000DCE89D /* Rest */ = {
 			isa = PBXGroup;
 			children = (
-				8824B79E235EEE6000DCE89D /* GitHubAPI.swift */,
+				882A91C52363FC4500F16B83 /* APIManager.swift */,
+				882A91C42363FC4500F16B83 /* BeberiaService.swift */,
 				8824B79F235EEE6000DCE89D /* Networking.swift */,
 				8824B7A0235EEE6000DCE89D /* RestApi.swift */,
 				8824B7A1235EEE6000DCE89D /* ErrorResponse.swift */,
@@ -537,15 +549,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882A91C92363FDE700F16B83 /* User.swift in Sources */,
 				8824B7CF235EEE6000DCE89D /* RestApi.swift in Sources */,
+				882A91CD2363FDEE00F16B83 /* CityName.swift in Sources */,
 				8824B756235EE3CA00DCE89D /* AppDelegate.swift in Sources */,
 				88222052236051E500208087 /* LoginViewModel.swift in Sources */,
-				8824B7CD235EEE6000DCE89D /* GitHubAPI.swift in Sources */,
 				8824B726235EDCD800DCE89D /* ViewController.swift in Sources */,
+				882A91CC2363FDEE00F16B83 /* BabyInfo.swift in Sources */,
 				8824B72C235EDCD800DCE89D /* RxDemo.xcdatamodeld in Sources */,
+				882A91C62363FC4500F16B83 /* BeberiaService.swift in Sources */,
 				8824B7A3235EEE6000DCE89D /* Api.swift in Sources */,
 				8824B7D0235EEE6000DCE89D /* ErrorResponse.swift in Sources */,
 				8824B771235EE8CE00DCE89D /* R.generated.swift in Sources */,
+				882A91C72363FC4500F16B83 /* APIManager.swift in Sources */,
 				882220502360519600208087 /* LoginViewController.swift in Sources */,
 				8824B7CE235EEE6000DCE89D /* Networking.swift in Sources */,
 			);

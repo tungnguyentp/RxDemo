@@ -53,28 +53,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ems-Fr-oOj">
+                                <rect key="frame" x="20" y="350" width="385" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="n6q-D7-W7u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="X16-0R-fbD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2XQ-CN-xW5"/>
+                            <constraint firstItem="hTt-J3-qdG" firstAttribute="leading" secondItem="Ems-Fr-oOj" secondAttribute="leading" id="78X-1r-22Q"/>
                             <constraint firstItem="t55-L2-Xhj" firstAttribute="centerX" secondItem="hTt-J3-qdG" secondAttribute="centerX" id="7BX-1f-qHf"/>
                             <constraint firstItem="hTt-J3-qdG" firstAttribute="top" secondItem="gbx-Ur-tWk" secondAttribute="bottom" constant="21" id="9RD-00-dGa"/>
                             <constraint firstItem="gbx-Ur-tWk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IBT-5V-Cqz"/>
                             <constraint firstItem="gbx-Ur-tWk" firstAttribute="centerX" secondItem="hTt-J3-qdG" secondAttribute="centerX" id="III-tD-Fi0"/>
                             <constraint firstItem="8aq-IH-MyJ" firstAttribute="leading" secondItem="gbx-Ur-tWk" secondAttribute="leading" id="V3P-X1-Jd6"/>
                             <constraint firstItem="gbx-Ur-tWk" firstAttribute="leading" secondItem="hTt-J3-qdG" secondAttribute="leading" id="VHW-Tb-rob"/>
+                            <constraint firstItem="hTt-J3-qdG" firstAttribute="trailing" secondItem="Ems-Fr-oOj" secondAttribute="trailing" id="a0e-9N-Ggx"/>
                             <constraint firstItem="t55-L2-Xhj" firstAttribute="top" secondItem="hTt-J3-qdG" secondAttribute="bottom" constant="67" id="fGF-mQ-MOd"/>
                             <constraint firstItem="X16-0R-fbD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="92" id="fSg-Bn-L5B"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gbx-Ur-tWk" secondAttribute="trailing" constant="9" id="fwL-nn-w2z"/>
                             <constraint firstItem="gbx-Ur-tWk" firstAttribute="top" secondItem="8aq-IH-MyJ" secondAttribute="bottom" constant="-1" id="gbh-sI-i1h"/>
                             <constraint firstItem="gbx-Ur-tWk" firstAttribute="top" secondItem="X16-0R-fbD" secondAttribute="bottom" constant="86" id="jvO-CT-KMy"/>
                             <constraint firstItem="8aq-IH-MyJ" firstAttribute="trailing" secondItem="gbx-Ur-tWk" secondAttribute="trailing" id="oUW-Qi-zJp"/>
+                            <constraint firstItem="Ems-Fr-oOj" firstAttribute="top" secondItem="hTt-J3-qdG" secondAttribute="bottom" constant="-1" id="phh-Ex-uCI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="btnLogin" destination="t55-L2-Xhj" id="9iX-rU-HLh"/>
                         <outlet property="lblErrorEmail" destination="8aq-IH-MyJ" id="7vK-gq-wXa"/>
+                        <outlet property="lblErrorPass" destination="Ems-Fr-oOj" id="rq2-zO-m5K"/>
                         <outlet property="tfPass" destination="hTt-J3-qdG" id="BVs-rg-KZp"/>
                         <outlet property="tfUser" destination="gbx-Ur-tWk" id="F4c-RC-vzL"/>
                     </connections>

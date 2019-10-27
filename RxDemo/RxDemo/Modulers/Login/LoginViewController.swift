@@ -20,9 +20,17 @@ class LoginViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     var viewModel = LoginViewModel()
+  //  let api = APIManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let _ = APIManager.share.get().subscribe(onSuccess: { (user) in
+            print("sdad")
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+     //   print(user)
 
         // Do any additional setup after loading the view.
         setUpBindings()

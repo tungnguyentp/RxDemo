@@ -24,12 +24,12 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let _ = APIManager.share.get().subscribe(onSuccess: { (user) in
-            print("sdad")
+        let _ = APIManager.login().subscribe(onSuccess: { (baseClass) in
+            print(baseClass.displayName as Any)
         }) { (error) in
-            print(error.localizedDescription)
+            print(error)
         }
-        
+
      //   print(user)
 
         // Do any additional setup after loading the view.
@@ -47,6 +47,11 @@ class LoginViewController: UIViewController {
         
         self.tfPass.rx.text.orEmpty
             .bind(to: viewModel.password).disposed(by: disposeBag)
+        
+        btnLogin.rx.tap.subscribe { (_) in
+            let homeVC = HomeViewController.init(nibName: "HomeViewController", bundle: nil)
+            self.navigationController?.pushViewController(homeVC, animated: true)
+        }.disposed(by: disposeBag)
        
         let input = LoginViewModel.Input.init(btnLogin: btnLogin.rx.tap.asDriver())
         let output = viewModel.transform(input: input)

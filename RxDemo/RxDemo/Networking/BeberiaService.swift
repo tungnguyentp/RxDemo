@@ -334,7 +334,7 @@ var method: Moya.Method {
             
         default :
           //  print(UserInfo.shareUserInfo.token)
-            return ["Content-Type": "application/json", "Authorization": "Bearer "]
+            return ["Content-Type": "application/json", "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLmJlYmVyaWEubWUvL2FwaS92MS9hdXRoL2xvZ2luIiwiaWF0IjoxNTcxOTcwMjI3LCJleHAiOjE1NzQ1OTgyMjcsIm5iZiI6MTU3MTk3MDIyNywianRpIjoid2RzbHFHWkdCcDUzMGdhNyIsInN1YiI6OTEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.XnHpmfaTxUwOsY8CXwDDz5nJI7-xtYX3P1IEII0jgd0 "]
         }
     }
     

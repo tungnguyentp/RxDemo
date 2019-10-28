@@ -1,7 +1,7 @@
 //
 //  User.swift
 //
-//  Created by IMAC on 10/26/19
+//  Created by IMAC on 10/28/19
 //  Copyright (c) . All rights reserved.
 //
 
@@ -21,6 +21,7 @@ public final class User: Mappable, NSCoding {
     static let numberFollower = "number_follower"
     static let babyInfo = "baby_info"
     static let checkFollow = "check_follow"
+    static let unWatch = "unWatch"
     static let id = "id"
     static let phone = "phone"
     static let avatar = "avatar"
@@ -35,8 +36,9 @@ public final class User: Mappable, NSCoding {
   public var typeMom: Int?
   public var cityName: CityName?
   public var numberFollower: Int?
-  public var babyInfo: [BabyInfo]?
+  public var babyInfo: [Any]?
   public var checkFollow: Int?
+  public var unWatch: Int?
   public var id: Int?
   public var phone: String?
   public var avatar: String?
@@ -63,6 +65,7 @@ public final class User: Mappable, NSCoding {
     numberFollower <- map[SerializationKeys.numberFollower]
     babyInfo <- map[SerializationKeys.babyInfo]
     checkFollow <- map[SerializationKeys.checkFollow]
+    unWatch <- map[SerializationKeys.unWatch]
     id <- map[SerializationKeys.id]
     phone <- map[SerializationKeys.phone]
     avatar <- map[SerializationKeys.avatar]
@@ -81,8 +84,9 @@ public final class User: Mappable, NSCoding {
     if let value = typeMom { dictionary[SerializationKeys.typeMom] = value }
     if let value = cityName { dictionary[SerializationKeys.cityName] = value.dictionaryRepresentation() }
     if let value = numberFollower { dictionary[SerializationKeys.numberFollower] = value }
-    if let value = babyInfo { dictionary[SerializationKeys.babyInfo] = value.map { $0.dictionaryRepresentation() } }
+    if let value = babyInfo { dictionary[SerializationKeys.babyInfo] = value }
     if let value = checkFollow { dictionary[SerializationKeys.checkFollow] = value }
+    if let value = unWatch { dictionary[SerializationKeys.unWatch] = value }
     if let value = id { dictionary[SerializationKeys.id] = value }
     if let value = phone { dictionary[SerializationKeys.phone] = value }
     if let value = avatar { dictionary[SerializationKeys.avatar] = value }
@@ -99,8 +103,9 @@ public final class User: Mappable, NSCoding {
     self.typeMom = aDecoder.decodeObject(forKey: SerializationKeys.typeMom) as? Int
     self.cityName = aDecoder.decodeObject(forKey: SerializationKeys.cityName) as? CityName
     self.numberFollower = aDecoder.decodeObject(forKey: SerializationKeys.numberFollower) as? Int
-    self.babyInfo = aDecoder.decodeObject(forKey: SerializationKeys.babyInfo) as? [BabyInfo]
+    self.babyInfo = aDecoder.decodeObject(forKey: SerializationKeys.babyInfo) as? [Any]
     self.checkFollow = aDecoder.decodeObject(forKey: SerializationKeys.checkFollow) as? Int
+    self.unWatch = aDecoder.decodeObject(forKey: SerializationKeys.unWatch) as? Int
     self.id = aDecoder.decodeObject(forKey: SerializationKeys.id) as? Int
     self.phone = aDecoder.decodeObject(forKey: SerializationKeys.phone) as? String
     self.avatar = aDecoder.decodeObject(forKey: SerializationKeys.avatar) as? String
@@ -117,6 +122,7 @@ public final class User: Mappable, NSCoding {
     aCoder.encode(numberFollower, forKey: SerializationKeys.numberFollower)
     aCoder.encode(babyInfo, forKey: SerializationKeys.babyInfo)
     aCoder.encode(checkFollow, forKey: SerializationKeys.checkFollow)
+    aCoder.encode(unWatch, forKey: SerializationKeys.unWatch)
     aCoder.encode(id, forKey: SerializationKeys.id)
     aCoder.encode(phone, forKey: SerializationKeys.phone)
     aCoder.encode(avatar, forKey: SerializationKeys.avatar)

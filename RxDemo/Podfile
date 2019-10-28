@@ -18,10 +18,11 @@ target 'RxDemo' do
     pod 'NSObject+Rx', '~> 5.0'  # https://github.com/RxSwiftCommunity/NSObject-Rx
     pod 'RxViewController', '~> 1.0'  # https://github.com/devxoul/RxViewController
     pod 'RxGesture', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxGesture
-    pod 'RxOptional', '~> 4.0'  # https://github.com/RxSwiftCommunity/RxOptional
+    #   pod 'RxOptional'  # https://github.com/RxSwiftCommunity/RxOptional
     pod 'RxTheme', '~> 4.0'  # https://github.com/RxSwiftCommunity/RxTheme
     #pod 'RxAnimated', '~> 0.4'  # https://github.com/RxSwiftCommunity/RxAnimated
-
+    pod 'Then'
+    
     # JSON Mapping
     #pod 'ObjectMapper', :git => 'https://github.com/kajensen/ObjectMapper.git'  # https://github.com/Hearst-DD/ObjectMapper
     pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/khoren93/Moya-ObjectMapper.git', :branch => 'moya14'  # https://github.com/ivanbruel/Moya-ObjectMapper
@@ -41,8 +42,13 @@ target 'RxDemo' do
     # Keychain
     pod 'KeychainAccess', '~> 3.0'  # https://github.com/kishikawakatsumi/KeychainAccess
 
-# UI
+    # UI
     pod 'NVActivityIndicatorView', '~> 4.0'  # https://github.com/ninjaprox/NVActivityIndicatorView
+    pod 'DZNEmptyDataSet', '~> 1.0'  # https://github.com/dzenbot/DZNEmptyDataSet
+    pod 'Hero', '~> 1.4.0'  # https://github.com/lkzhao/Hero
+    pod 'Localize-Swift', '~> 2.0'  # https://github.com/marmelroy/Localize-Swift
+    pod 'RAMAnimatedTabBarController', '~> 5.0'  # https://github.com/Ramotion/animated-tab-bar
+
 
  # Keyboard
     pod 'IQKeyboardManagerSwift', '~> 6.0'  # https://github.com/hackiftekhar/IQKeyboardManager

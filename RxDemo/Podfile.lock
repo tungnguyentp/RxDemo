@@ -5,11 +5,14 @@ PODS:
   - Apollo/Core (0.15.0)
   - DateToolsSwift (4.0.0)
   - Differentiator (4.0.1)
+  - DZNEmptyDataSet (1.8.1)
+  - Hero (1.4.0)
   - IQKeyboardManagerSwift (6.5.1)
   - KeychainAccess (3.2.1)
   - Kingfisher (5.8.3):
     - Kingfisher/Core (= 5.8.3)
   - Kingfisher/Core (5.8.3)
+  - Localize-Swift (2.0.0)
   - Moya (14.0.0-beta.2):
     - Moya/Core (= 14.0.0-beta.2)
   - Moya-ObjectMapper/Core (2.8):
@@ -33,6 +36,7 @@ PODS:
   - R.swift (5.1.0.alpha.4):
     - R.swift.Library (~> 5.1.0.alpha.1)
   - R.swift.Library (5.1.0)
+  - RAMAnimatedTabBarController (5.0.1)
   - ReachabilitySwift (5.0.0-beta1)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
@@ -44,9 +48,6 @@ PODS:
   - RxGesture (3.0.1):
     - RxCocoa (~> 5.0)
     - RxSwift (~> 5.0)
-  - RxOptional (4.1.0):
-    - RxCocoa (~> 5)
-    - RxSwift (~> 5)
   - RxRelay (5.0.0):
     - RxSwift (~> 5)
   - RxSwift (5.0.0)
@@ -67,31 +68,36 @@ PODS:
   - SwiftDate (6.1.0)
   - SwiftLint (0.34.0)
   - SwiftyJSON (4.3.0)
+  - Then (2.6.0)
 
 DEPENDENCIES:
   - Apollo (= 0.15.0)
   - DateToolsSwift (~> 4.0)
+  - DZNEmptyDataSet (~> 1.0)
+  - Hero (~> 1.4.0)
   - IQKeyboardManagerSwift (~> 6.0)
   - KeychainAccess (~> 3.0)
   - Kingfisher (~> 5.0)
+  - Localize-Swift (~> 2.0)
   - Moya-ObjectMapper/RxSwift (from `https://github.com/khoren93/Moya-ObjectMapper.git`, branch `moya14`)
   - Moya/RxSwift (= 14.0.0-beta.2)
   - "NSObject+Rx (~> 5.0)"
   - NVActivityIndicatorView (~> 4.0)
   - R.swift (= 5.1.0.alpha.4)
+  - RAMAnimatedTabBarController (~> 5.0)
   - ReachabilitySwift (= 5.0.0-beta1)
   - RxDataSources (~> 4.0)
   - RxGesture (~> 3.0)
-  - RxOptional (~> 4.0)
   - RxSwiftExt (~> 5.0)
   - RxTheme (~> 4.0)
   - RxViewController (~> 1.0)
   - SwiftDate (~> 6.0)
   - SwiftLint (= 0.34.0)
   - SwiftyJSON (~> 4.0)
+  - Then
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - Apollo
     - DateToolsSwift
@@ -109,7 +115,6 @@ SPEC REPOS:
     - RxCocoa
     - RxDataSources
     - RxGesture
-    - RxOptional
     - RxRelay
     - RxSwift
     - RxSwiftExt
@@ -118,6 +123,12 @@ SPEC REPOS:
     - SwiftDate
     - SwiftLint
     - SwiftyJSON
+  trunk:
+    - DZNEmptyDataSet
+    - Hero
+    - Localize-Swift
+    - RAMAnimatedTabBarController
+    - Then
 
 EXTERNAL SOURCES:
   Moya-ObjectMapper:
@@ -134,9 +145,12 @@ SPEC CHECKSUMS:
   Apollo: a103aa59622fceb089063517db058e3d37d7c0ca
   DateToolsSwift: 875d97ff9e3a5d54abdd67a269b3f51c757b71ab
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
   IQKeyboardManagerSwift: 9ac7524fad9f9fe9a3b98c927e7772471ca546d2
   KeychainAccess: d5470352939ced6d6f7fb51cb2e67aae51fc294f
   Kingfisher: b7e4cb65ff24c264bd2a1284b75b974d907afd94
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
   Moya: 788e592b92fadb10e30d350ed1a9f75c91eb1368
   Moya-ObjectMapper: f5a442e9c6a87fac57a9b1b954f1cf91a50a15f7
   "NSObject+Rx": 2eb2cf51fd1c554118449a7fbc36e4cd620b9e94
@@ -144,11 +158,11 @@ SPEC CHECKSUMS:
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   R.swift: 28fd04ea6eef3e5f494c963e367e4704293036c7
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  RAMAnimatedTabBarController: ec36fba2fa4679fd36db55098e3477fe9bd79f52
   ReachabilitySwift: 93a5956ef3f076d7e24bc65bfb1c5042e69b7276
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: a3f8dd6adf078110ed5e1c9c30d09d705a09852e
-  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
   RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
   RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
   RxSwiftExt: 0d2fd77523a169d1459be34961b996a194bdef0e
@@ -157,7 +171,8 @@ SPEC CHECKSUMS:
   SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
   SwiftLint: 79d48a17c6565dc286c37efb8322c7b450f95c67
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  Then: 90cd104fd951cec1980a03f57704ad8f784d4d79
 
-PODFILE CHECKSUM: 4223948ed47108bdc6d6e3c4408ecc66b1580ac0
+PODFILE CHECKSUM: fc6cc85990a4202b1a97cb155b4faf9af411c59f
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
